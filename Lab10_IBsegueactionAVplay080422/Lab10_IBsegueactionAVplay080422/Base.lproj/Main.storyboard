@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lab10_IBsegueactionAVplay080422" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="五月天封面-2" highlightedImage="五月天封面-2" translatesAutoresizingMaskIntoConstraints="NO" id="rov-kK-e9E">
+                                <rect key="frame" x="-12" y="35" width="414" height="827"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vno-OI-Hlq">
+                                <rect key="frame" x="8" y="105" width="374" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="私奔到月球screenshot"/>
+                                <connections>
+                                    <action selector="btnMv1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fB-1b-McV"/>
+                                    <segue destination="EPf-vL-8Ks" kind="show" identifier="mv1" destinationCreationSelector="mvChoice:sender:segueIdentifier:" id="cXq-oo-c8p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tu7-2g-rYp">
+                                <rect key="frame" x="8" y="243" width="374" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="終結孤單"/>
+                                <connections>
+                                    <action selector="btnMv1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wK8-Tl-Td8"/>
+                                    <segue destination="EPf-vL-8Ks" kind="show" identifier="mv2" destinationCreationSelector="mvChoice:sender:segueIdentifier:" id="bP8-FM-snK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cny-21-hRk">
+                                <rect key="frame" x="8" y="647" width="374" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="終於結束的起點"/>
+                                <connections>
+                                    <action selector="btnMv1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bU5-kL-56k"/>
+                                    <segue destination="EPf-vL-8Ks" kind="show" identifier="mv3" destinationCreationSelector="mvChoice:sender:segueIdentifier:" id="1tl-ct-rei"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="MV1" destination="Vno-OI-Hlq" id="qQK-98-a0B"/>
+                        <outlet property="MV2" destination="Tu7-2g-rYp" id="VD5-b0-7Kg"/>
+                        <outlet property="MV3" destination="Cny-21-hRk" id="yCK-R8-Cb5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="89.732142857142847"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="VPy-Hi-zPC">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="EPf-vL-8Ks" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="YL1-8s-NDd"/>
+                </avPlayerViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBK-Sz-oZj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869" y="95"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="1tl-ct-rei"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="五月天封面-2" width="225" height="225"/>
+        <image name="私奔到月球screenshot" width="641" height="245"/>
+        <image name="終於結束的起點" width="296" height="219"/>
+        <image name="終結孤單" width="632" height="301"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
